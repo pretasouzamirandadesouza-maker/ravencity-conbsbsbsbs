@@ -12,7 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import com.nvidia.devtech.CustomEditText;
 import com.nvidia.devtech.NvEventQueueActivity;
-import com.touch.mobile.dark.R;
+import com.aurora.launcher.R;
 import com.touch.mobile.dark.gui.util.CustomRecyclerView;
 import com.touch.mobile.dark.gui.util.Utils;
 

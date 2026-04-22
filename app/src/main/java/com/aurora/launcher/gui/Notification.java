@@ -13,7 +13,7 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 
-import com.touch.mobile.dark.R;
+import com.aurora.launcher.R;
 import com.touch.mobile.dark.gui.util.Utils;
 import com.nvidia.devtech.NvEventQueueActivity;
 

@@ -3,7 +3,7 @@ package com.touch.mobile.dark.gui;
 import android.app.Activity;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import com.touch.mobile.dark.R;
+import com.aurora.launcher.R;
 import com.touch.mobile.dark.gui.util.Utils;
 import com.nvidia.devtech.NvEventQueueActivity;
 import java.util.Formatter;

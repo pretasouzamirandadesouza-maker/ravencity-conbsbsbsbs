@@ -7,7 +7,7 @@ import android.widget.*;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.touch.mobile.dark.R;
+import com.aurora.launcher.R;
 import com.touch.mobile.dark.gui.util.Utils;
 import com.touch.mobile.dark.gui.util.SeekArc;
 import java.util.Formatter;

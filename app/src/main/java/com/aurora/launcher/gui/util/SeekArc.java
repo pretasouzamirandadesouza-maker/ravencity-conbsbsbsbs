@@ -35,7 +35,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.touch.mobile.dark.R;
+import com.aurora.launcher.R;
 
 /**
  *

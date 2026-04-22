@@ -52,7 +52,7 @@ import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.touch.mobile.dark.R;
+import com.aurora.launcher.R;
 import com.touch.mobile.dark.gui.HudManager;
 import com.touch.mobile.dark.gui.dialogs.Dialog;
 import com.touch.mobile.dark.gui.Speedometer;

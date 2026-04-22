@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import com.touch.mobile.dark.R;
+import com.aurora.launcher.R;
 import com.touch.mobile.dark.gui.util.LinearLayoutManagerWrapper;
 import com.touch.mobile.dark.gui.util.Utils;
 import com.nvidia.devtech.NvEventQueueActivity;
