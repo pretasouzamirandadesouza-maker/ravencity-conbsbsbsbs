@@ -1,5 +1,4 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/br_serverselect_layout"
     android:layout_width="wrap_content"
@@ -43,11 +42,11 @@
                     android:textColor="#FFFFFF"
                     android:textSize="10dp" />
 
-                <com.tuyenmonkey.mkloader.MKLoader
+                <ProgressBar
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    app:mk_color="#A6FFC4F9"
-                    app:mk_type="FishSpinner" />
+                    android:layout_gravity="center"
+                    android:indeterminate="true" />
             </FrameLayout>
         </LinearLayout>
     </LinearLayout>
