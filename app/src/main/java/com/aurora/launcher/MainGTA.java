@@ -3,6 +3,7 @@ package com.aurora.launcher;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.KeyEvent;
 
 import com.aurora.launcher.gui.util.Utils;
@@ -19,9 +20,21 @@ public class MainGTA extends WarMedia {
     static String vmVersion;
     private boolean once = false;
 
+    // Definição do caminho da pasta raiz do seu launcher
+    private static final String CAMINHO_RAIZ = Environment.getExternalStorageDirectory().getAbsolutePath() + "/com.aurora.launcher";
+
     static {
         vmVersion = null;
         System.out.println("**** Loading SO's");
+
+        // 1. CARREGANDO A BASS (Obrigatória para o áudio)
+        try {
+            System.loadLibrary("bass");
+            System.out.println("bass OK");
+        } catch (Throwable t) {
+            System.out.println("Erro crítico: libbass não encontrada!");
+            t.printStackTrace();
+        }
 
         try {
             vmVersion = System.getProperty("java.vm.version");
@@ -55,12 +68,13 @@ public class MainGTA extends WarMedia {
         }
     }
 
+    // Método de log ajustado para salvar na pasta visível do launcher
     private void log(String texto) {
         try {
-            File pasta = getExternalFilesDir(null);
-            if (pasta == null) return;
+            File pasta = new File(CAMINHO_RAIZ);
+            if (!pasta.exists()) pasta.mkdirs();
 
-            File logFile = new File(pasta, "log.txt");
+            File logFile = new File(pasta, "log_gta.txt");
             FileWriter writer = new FileWriter(logFile, true);
             writer.append(texto).append("\n");
             writer.close();
@@ -72,27 +86,22 @@ public class MainGTA extends WarMedia {
     private void installCrashLogger() {
         Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
             try {
-                File pasta = getExternalFilesDir(null);
-                if (pasta != null) {
-                    File crashFile = new File(pasta, "crash.txt");
-                    FileWriter writer = new FileWriter(crashFile, true);
+                File pasta = new File(CAMINHO_RAIZ);
+                if (!pasta.exists()) pasta.mkdirs();
 
-                    writer.append("THREAD: ")
-                            .append(thread.getName())
-                            .append("\n");
+                File crashFile = new File(pasta, "crash_gta.txt");
+                FileWriter writer = new FileWriter(crashFile, true);
 
-                    writer.append("ERRO: ")
-                            .append(String.valueOf(throwable))
-                            .append("\n");
+                writer.append("THREAD: ").append(thread.getName()).append("\n");
+                writer.append("ERRO: ").append(String.valueOf(throwable)).append("\n");
 
-                    StringWriter sw = new StringWriter();
-                    PrintWriter pw = new PrintWriter(sw);
-                    throwable.printStackTrace(pw);
+                StringWriter sw = new StringWriter();
+                PrintWriter pw = new PrintWriter(sw);
+                throwable.printStackTrace(pw);
 
-                    writer.append(sw.toString()).append("\n");
-                    writer.append("------------\n");
-                    writer.close();
-                }
+                writer.append(sw.toString()).append("\n");
+                writer.append("------------\n");
+                writer.close();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -144,25 +153,12 @@ public class MainGTA extends WarMedia {
             t.printStackTrace();
         }
 
-        try {
-            File pasta = getExternalFilesDir(null);
-            if (pasta != null) {
-                log("Pasta app: " + pasta.getAbsolutePath());
-            } else {
-                log("getExternalFilesDir retornou null");
-            }
-        } catch (Throwable t) {
-            log("Erro ao pegar pasta externa: " + t);
-            t.printStackTrace();
-        }
-
         log("MainGTA onCreate fim");
     }
 
     @Override
     public void onDestroy() {
         log("onDestroy");
-        System.out.println("MainGTA onDestroy");
         super.onDestroy();
     }
 
@@ -175,35 +171,30 @@ public class MainGTA extends WarMedia {
     @Override
     public void onPause() {
         log("onPause");
-        System.out.println("MainGTA onPause");
         super.onPause();
     }
 
     @Override
     public void onRestart() {
         log("onRestart");
-        System.out.println("MainGTA onRestart");
         super.onRestart();
     }
 
     @Override
     public void onResume() {
         log("onResume");
-        System.out.println("MainGTA onResume");
         super.onResume();
     }
 
     @Override
     public void onStart() {
         log("onStart");
-        System.out.println("MainGTA onStart");
         super.onStart();
     }
 
     @Override
     public void onStop() {
         log("onStop");
-        System.out.println("MainGTA onStop");
         super.onStop();
     }
-                                                   }
+}
