@@ -41,7 +41,7 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".MainGTA"
+            android:name=".SAMP"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
 
