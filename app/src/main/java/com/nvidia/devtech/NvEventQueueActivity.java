@@ -53,13 +53,13 @@ import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.aurora.launcher.R;
-import com.touch.mobile.dark.gui.HudManager;
-import com.touch.mobile.dark.gui.dialogs.Dialog;
-import com.touch.mobile.dark.gui.Speedometer;
-import com.touch.mobile.dark.gui.Notification;
-import com.touch.mobile.dark.gui.Menu;
-import com.touch.mobile.dark.gui.ChooseServer;
-import com.touch.mobile.dark.gui.tab.Tab;
+import com.aurora.launcher.gui.HudManager;
+import com.aurora.launcher.gui.dialogs.Dialog;
+import com.aurora.launcher.gui.Speedometer;
+import com.aurora.launcher.gui.Notification;
+import com.aurora.launcher.gui.Menu;
+import com.aurora.launcher.gui.ChooseServer;
+import com.aurora.launcher.gui.tab.Tab;
 
 import java.io.FileInputStream;
 import java.io.IOException;
