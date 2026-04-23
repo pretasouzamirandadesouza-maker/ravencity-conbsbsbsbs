@@ -1,4 +1,4 @@
-package com.touch.mobile.dark.gui.adapters;
+package com.aurora.launcher.gui.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
