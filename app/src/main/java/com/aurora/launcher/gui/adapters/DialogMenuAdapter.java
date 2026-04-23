@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.aurora.launcher.R;
-import com.touch.mobile.dark.gui.models.DataDialogMenu;
+import com.aurora.launcher.gui.models.DataDialogMenu;
 import java.util.List;
 
 public class DialogMenuAdapter extends RecyclerView.Adapter<DialogMenuAdapter.DialogMenuHolder> {
