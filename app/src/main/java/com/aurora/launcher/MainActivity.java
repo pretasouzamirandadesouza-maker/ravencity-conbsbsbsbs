@@ -3,6 +3,7 @@ package com.aurora.launcher;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         conectar = findViewById(R.id.btnConectar);
 
         if (conectar == null) {
-            escreverLog("ERRO: botão não encontrado");
+            escreverLog("ERRO: btnConectar não encontrado no layout");
+            Toast.makeText(this, "Erro: botão não encontrado", Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -31,14 +33,13 @@ public class MainActivity extends AppCompatActivity {
             escreverLog("Clicou em entrar no servidor");
 
             try {
-                // 🔥 TESTE: abrir tela simples
-                startActivity(new Intent(MainActivity.this, AvisoActivity.class));
-
-                escreverLog("Abriu AvisoActivity com sucesso");
-
+                Intent intent = new Intent(MainActivity.this, samp.class);
+                startActivity(intent);
+                escreverLog("Tentou abrir MainGTA");
             } catch (Exception e) {
-                escreverLog("ERRO ao abrir AvisoActivity: " + e.toString());
+                escreverLog("ERRO ao abrir MainGTA: " + e.toString());
                 e.printStackTrace();
+                Toast.makeText(MainActivity.this, "Erro ao abrir o jogo", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -46,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
     private void escreverLog(String texto) {
         try {
             File pasta = getExternalFilesDir(null);
-            if (pasta == null) return;
+            if (pasta == null) {
+                return;
+            }
 
             File logFile = new File(pasta, "log.txt");
 
