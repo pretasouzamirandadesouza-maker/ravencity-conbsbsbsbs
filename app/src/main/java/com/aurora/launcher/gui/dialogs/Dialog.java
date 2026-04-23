@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.nvidia.devtech.CustomEditText;
 import com.nvidia.devtech.NvEventQueueActivity;
 import com.aurora.launcher.R;
-import com.touch.mobile.dark.gui.util.CustomRecyclerView;
-import com.touch.mobile.dark.gui.util.Utils;
+import com.aurora.launcher.gui.util.CustomRecyclerView;
+import com.aurora.launcher.gui.util.Utils;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
