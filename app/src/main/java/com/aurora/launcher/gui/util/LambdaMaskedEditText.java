@@ -1,4 +1,4 @@
-package com.touch.mobile.dark.gui.util;
+package com.aurora.launcher.gui.util;
 
 import android.view.KeyEvent;
 import android.widget.TextView;
