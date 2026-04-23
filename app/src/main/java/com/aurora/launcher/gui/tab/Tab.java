@@ -1,4 +1,4 @@
-package com.touch.mobile.dark.gui.tab;
+package com.aurora.launcher.gui.tab;
 
 import android.app.Activity;
 import android.text.Editable;
