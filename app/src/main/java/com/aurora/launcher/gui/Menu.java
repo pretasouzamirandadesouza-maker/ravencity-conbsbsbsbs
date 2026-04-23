@@ -4,9 +4,9 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 
 import com.aurora.launcher.R;
-import com.touch.mobile.dark.gui.adapters.DialogMenuAdapter;
-import com.touch.mobile.dark.gui.models.DataDialogMenu;
-import com.touch.mobile.dark.gui.util.Utils;
+import com.aurora.launcher.gui.adapters.DialogMenuAdapter;
+import com.aurora.launcher.gui.models.DataDialogMenu;
+import com.aurora.launcher.gui.util.Utils;
 import com.nvidia.devtech.NvEventQueueActivity;
 
 import android.content.Context;
