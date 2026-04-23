@@ -7,8 +7,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.File;
-
 public class DownloadActivity extends AppCompatActivity {
 
     ProgressBar progressBar;
@@ -23,15 +21,8 @@ public class DownloadActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         porcentagem = findViewById(R.id.txtPorcentagem);
 
-        // 🔥 CRIAR PASTA AUTOMÁTICA
-        File pasta = getExternalFilesDir(null);
-        if (pasta != null) {
-            File files = new File(pasta, "files");
-            File samp = new File(pasta, "SAMP");
-
-            if (!files.exists()) files.mkdirs();
-            if (!samp.exists()) samp.mkdirs();
-        }
+        // 🔥 FORÇA CRIAÇÃO DA PASTA DO APP (sem duplicar)
+        getExternalFilesDir(null);
 
         Handler handler = new Handler();
 
