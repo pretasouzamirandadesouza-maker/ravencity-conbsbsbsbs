@@ -1,4 +1,4 @@
-package com.touch.mobile.dark.gui.tab;
+package com.aurora.launcher.gui.tab;
 
 public class PlayerData {
     int mID;
