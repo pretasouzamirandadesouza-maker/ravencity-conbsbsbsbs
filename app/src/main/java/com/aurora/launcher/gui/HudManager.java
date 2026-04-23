@@ -11,7 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.nvidia.devtech.NvEventQueueActivity;
 import com.aurora.launcher.R;
-import com.touch.mobile.dark.gui.util.Utils;
+import com.aurora.launcher.gui.util.Utils;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
