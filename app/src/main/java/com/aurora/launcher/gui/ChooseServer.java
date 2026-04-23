@@ -1,4 +1,4 @@
-package com.touch.mobile.dark.gui;
+package com.aurora.launcher.gui;
 
 import android.app.Activity;
 import android.widget.FrameLayout;
