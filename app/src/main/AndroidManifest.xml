@@ -16,7 +16,7 @@
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
 
-    <!-- TESTE FORTE DE ACESSO TOTAL -->
+    <!-- ACESSO TOTAL (teste) -->
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 
     <application
@@ -26,22 +26,27 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:requestLegacyExternalStorage="true">
 
+        <!-- TELA INICIAL -->
         <activity
             android:name=".DownloadActivity"
             android:exported="true"
             android:screenOrientation="landscape">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
+        <!-- MENU -->
         <activity
             android:name=".MainActivity"
             android:screenOrientation="landscape" />
 
+        <!-- CLIENTE GTA / SAMP -->
         <activity
-            android:name=".SAMP"
+            android:name=".MainGTA"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
 
