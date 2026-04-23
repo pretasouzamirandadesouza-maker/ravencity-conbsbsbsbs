@@ -7,7 +7,7 @@ import android.view.KeyEvent;
 
 import com.wardrumstudios.utils.WarMedia;
 
-import com.aurora.launcher.Utils.gui.util.Utils;
+import com.aurora.launcher.gui.util.Utils;
 
 public class MainGTA extends WarMedia {
     public static MainGTA self = null;
