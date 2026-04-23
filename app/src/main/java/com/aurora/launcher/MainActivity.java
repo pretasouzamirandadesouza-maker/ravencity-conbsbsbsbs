@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
             escreverLog("Clicou em entrar no servidor");
 
             try {
-                Intent intent = new Intent(MainActivity.this, samp.class);
+                Intent intent = new Intent(MainActivity.this, SAMP.class);
                 startActivity(intent);
-                escreverLog("Tentou abrir MainGTA");
+                escreverLog("Tentou abrir SAMP");
             } catch (Exception e) {
-                escreverLog("ERRO ao abrir MainGTA: " + e.toString());
+                escreverLog("ERRO ao abrir SAMP: " + e.toString());
                 e.printStackTrace();
                 Toast.makeText(MainActivity.this, "Erro ao abrir o jogo", Toast.LENGTH_LONG).show();
             }
