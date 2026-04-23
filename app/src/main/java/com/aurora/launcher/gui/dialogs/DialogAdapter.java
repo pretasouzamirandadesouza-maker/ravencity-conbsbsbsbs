@@ -10,8 +10,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aurora.launcher.R;
-import com.touch.mobile.dark.gui.util.MaskedEditText;
-import com.touch.mobile.dark.gui.util.Utils;
+import com.aurora.launcher.gui.util.MaskedEditText;
+import com.aurora.launcher.gui.util.Utils;
 
 import java.util.ArrayList;
 
