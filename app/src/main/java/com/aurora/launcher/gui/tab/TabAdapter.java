@@ -14,7 +14,7 @@ import android.view.animation.AnimationUtils;
 import com.aurora.launcher.R;
 import java.util.ArrayList;
 import java.util.List;
-import com.touch.mobile.dark.gui.util.Utils;
+import com.aurora.launcher.gui.util.Utils;
 public class TabAdapter extends RecyclerView.Adapter implements Filterable {
 
     private List<PlayerData> mPlayerData;
