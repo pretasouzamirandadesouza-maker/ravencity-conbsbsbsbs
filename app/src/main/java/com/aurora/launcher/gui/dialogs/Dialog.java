@@ -1,4 +1,4 @@
-package com.touch.mobile.dark.gui.dialogs;
+package com.aurora.launcher.gui.dialogs;
 
 import android.app.Activity;
 import android.content.Context;
